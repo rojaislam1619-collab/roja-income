@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roja Islam - Income Platform</title>
+    <title>Roja Islam - Official Linktree</title>
     <link rel="stylesheet" href="style.css">
     
     <script data-goatcounter="https://roja-stats.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -14,76 +14,21 @@
             <div class="avatar-container">
                 <img src="https://github.com/rojaislam1619-collab.png" alt="Profile" class="avatar">
             </div>
-            <h1>Roja Islam Income</h1>
-            <p class="subtitle">সহজে টাস্ক পূরণ করে ইনকাম করুন</p>
-        </div>
-
-        <div class="balance-box">
-            Your Balance
-            <div class="balance-amount" id="balanceDisplay">৳ ০.০০</div>
+            <h1>Roja Islam</h1>
+            <p class="subtitle">Welcome to my official tech platform</p>
         </div>
 
         <div class="menu-container">
-            <a href="https://www.youtube.com/watch?v=zwufAOq4Ask" class="task-btn" id="taskBtn">⚡ Start Daily Task</a>
-
-            <a href="#" class="task-btn" id="withdrawBtn" style="background-color: #ff477e; border: 1px solid #ff477e;">💸 Withdraw (টাকা তুলুন)</a>
+            <a href="https://youtube.com/@dabang_bd?si=B_LwwwZuD3l-j-az" class="task-btn" style="background-color: #ef233c; border: 1px solid #ef233c;">🔴 Subscribe YouTube Channel</a>
             
-            <a href="https://t.me/+Tdq2zFmwi605ZDY1" class="task-btn">🔵 Join Telegram Group</a>
-            <a href="https://youtube.com/@dabang_bd?si=B_LwwwZuD3l-j-az" class="task-btn">🔴 YouTube Channel</a>
+            <a href="https://t.me/+Tdq2zFmwi605ZDY1" class="task-btn" style="background-color: #0088cc; border: 1px solid #0088cc;">🔵 Join Telegram Community</a>
+            
+            <a href="https://www.youtube.com/watch?v=zwufAOq4Ask" class="task-btn">📺 Watch Latest Tech Tutorial</a>
         </div>
 
-        <div style="margin-top: 25px; color: #a0aec0; font-size: 14px; border-top: 1px solid #334155; padding-top: 15px;">
-            🤖 <span style="color: #00f5d4;">Secure Live System Connected</span>
+        <div style="margin-top: 30px; color: #a0aec0; font-size: 13px; border-top: 1px solid #334155; padding-top: 15px;">
+            🔒 Official Secure Verified Page
         </div>
     </div>
-
-    <script>
-        const rewardAmount = 5.00; 
-        const minimumWithdraw = 50.00; 
-        
-        let currentBalance = parseFloat(localStorage.getItem('userBalance')) || 0.00;
-        
-        function updateBalanceDisplay() {
-            document.getElementById('balanceDisplay').innerText = "৳ " + currentBalance.toFixed(2);
-        }
-        
-        updateBalanceDisplay();
-
-        document.getElementById('taskBtn').addEventListener('click', function() {
-            currentBalance += rewardAmount;
-            localStorage.setItem('userBalance', currentBalance);
-            updateBalanceDisplay();
-            alert("অভিনন্দন! আপনার টাস্কের " + rewardAmount + " টাকা সফলভাবে যোগ হয়েছে।");
-        });
-
-        document.getElementById('withdrawBtn').addEventListener('click', function(e) {
-            e.preventDefault(); 
-            
-            if (currentBalance < minimumWithdraw) {
-                alert("দুঃখিত! টাকা তোলার জন্য আপনার অ্যাকাউন্টে সর্বনিম্ন ৳ " + minimumWithdraw + " থাকতে হবে। আপনার বর্তমান ব্যালেন্স ৳ " + currentBalance.toFixed(2));
-                return;
-            }
-            
-            let method = prompt("টাকা নেওয়ার মাধ্যমটি লিখুন:\n১. bKash (বিকাশ)\n২. Nagad (নগদ)");
-            if (!method) return;
-
-            let number = prompt("আপনার " + method + " নাম্বারটি দিন:");
-            if (!number) return;
-
-            let amountStr = prompt("কত টাকা তুলতে চান লিখুন (সর্বোচ্চ: ৳ " + currentBalance.toFixed(2) + "):");
-            let amount = parseFloat(amountStr);
-
-            if (isNaN(amount) || amount <= 0 || amount > currentBalance) {
-                alert("ভুল টাকার পরিমাণ দিয়েছেন! আবার চেষ্টা করুন।");
-                return;
-            }
-
-            currentBalance -= amount;
-            localStorage.setItem('userBalance', currentBalance);
-            updateBalanceDisplay();
-
-            alert("আপনার উইথড্র রিকোয়েস্টটি সফল হয়েছে!\n\nমাধ্যম: " + method + "\nনাম্বার: " + number + "\nপরিমাণ: ৳ " + amount.toFixed(2) + "\n\nআগামী ২৪ ঘণ্টার মধ্যে আপনার টাকা পাঠিয়ে দেওয়া হবে। ধন্যবাদ!");
-        });
-    </script>
 </body>
 </html>
