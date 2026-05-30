@@ -29,12 +29,15 @@
             <a href="https://t.me/+Tdq2zFmwi605ZDY1" class="task-btn">🔵 Join Telegram Group</a>
             <a href="https://youtube.com/@dabang_bd?si=B_LwwwZuD3l-j-az" class="task-btn">🔴 YouTube Channel</a>
         </div>
+
+        <div style="margin-top: 25px; color: #a0aec0; font-size: 14px; border-top: 1px solid #334155; padding-top: 15px;">
+            👥 মোট ভিজিটর: <img src="https://profile-counter.glitch.me/rojaislam1619-collab/count.svg" alt="Views" style="vertical-align: middle; margin-left: 5px;">
+        </div>
     </div>
 
     <script>
-        // টাস্ক বোনাস এবং সর্বনিম্ন কত টাকা তোলা যাবে (এখানে আপনি পরিবর্তন করতে পারবেন)
         const rewardAmount = 5.00; 
-        const minimumWithdraw = 50.00; // সর্বনিম্ন ৫০ টাকা হলে তুলতে পারবে
+        const minimumWithdraw = 50.00; 
         
         let currentBalance = parseFloat(localStorage.getItem('userBalance')) || 0.00;
         
@@ -44,7 +47,6 @@
         
         updateBalanceDisplay();
 
-        // টাস্ক বাটনে ক্লিক করলে টাকা যোগ হবে
         document.getElementById('taskBtn').addEventListener('click', function() {
             currentBalance += rewardAmount;
             localStorage.setItem('userBalance', currentBalance);
@@ -52,24 +54,20 @@
             alert("অভিনন্দন! আপনার টাস্কের " + rewardAmount + " টাকা সফলভাবে যোগ হয়েছে।");
         });
 
-        // 💸 বিকাশ/নগদ উইথড্র সিস্টেমের কোড 💸
         document.getElementById('withdrawBtn').addEventListener('click', function(e) {
-            e.preventDefault(); // পেজ রিফ্রেশ হওয়া বন্ধ করবে
+            e.preventDefault(); 
             
             if (currentBalance < minimumWithdraw) {
                 alert("দুঃখিত! টাকা তোলার জন্য আপনার অ্যাকাউন্টে সর্বনিম্ন ৳ " + minimumWithdraw + " থাকতে হবে। আপনার বর্তমান ব্যালেন্স ৳ " + currentBalance.toFixed(2));
                 return;
             }
             
-            // ইউজারের কাছ থেকে মেথড জানা
             let method = prompt("টাকা নেওয়ার মাধ্যমটি লিখুন:\n১. bKash (বিকাশ)\n২. Nagad (নগদ)");
             if (!method) return;
 
-            // ইউজারের নাম্বার নেওয়া
             let number = prompt("আপনার " + method + " নাম্বারটি দিন:");
             if (!number) return;
 
-            // কত টাকা তুলতে চায় তা নেওয়া
             let amountStr = prompt("কত টাকা তুলতে চান লিখুন (সর্বোচ্চ: ৳ " + currentBalance.toFixed(2) + "):");
             let amount = parseFloat(amountStr);
 
@@ -78,15 +76,11 @@
                 return;
             }
 
-            // ব্যালেন্স থেকে টাকা কেটে নেওয়া
             currentBalance -= amount;
             localStorage.setItem('userBalance', currentBalance);
             updateBalanceDisplay();
 
-            // ইউজারকে সফলতার মেসেজ দেখানো
             alert("আপনার উইথড্র রিকোয়েস্টটি সফল হয়েছে!\n\nমাধ্যম: " + method + "\nনাম্বার: " + number + "\nপরিমাণ: ৳ " + amount.toFixed(2) + "\n\nআগামী ২৪ ঘণ্টার মধ্যে আপনার টাকা পাঠিয়ে দেওয়া হবে। ধন্যবাদ!");
-            
-            // 💡 নির্দেশনা: প্রফেশনাল সাইটে এই ডাটা ডাটাবেজে যায়। আমরা যেহেতু ফ্রন্টএন্ডে করছি, ইউজার আপনাকে তার এই রিকোয়েস্টের একটি স্ক্রিনশট আপনার টেলিগ্রামে বা গ্রুপে মেসেজ করে পাঠাবে, আর আপনি চেক করে তাকে টাকা পাঠিয়ে দেবেন।
         });
     </script>
 </body>
