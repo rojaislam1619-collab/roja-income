@@ -31,32 +31,21 @@
     </div>
 
     <script>
-        // প্রতি টাস্কে কত টাকা দেওয়া হবে (এখানে আপনি টাকার পরিমাণ পরিবর্তন করতে পারবেন)
         const rewardAmount = 5.00; 
-
-        // ব্রাউজারের মেমোরি থেকে আগের ব্যালেন্স লোড করা
         let currentBalance = parseFloat(localStorage.getItem('userBalance')) || 0.00;
         
-        // স্ক্রিনে ব্যালেন্স দেখানোর ফাংশন
         function updateBalanceDisplay() {
             document.getElementById('balanceDisplay').innerText = "৳ " + currentBalance.toFixed(2);
         }
         
-        // পেজ লোড হলেই জমানো টাকা স্ক্রিনে দেখাবে
         updateBalanceDisplay();
 
-        // টাস্ক বাটনে ক্লিক করলে যা হবে
         document.getElementById('taskBtn').addEventListener('click', function() {
-            // ব্যালেন্সের সাথে টাকা যোগ করা
             currentBalance += rewardAmount;
-            
-            // নতুন ব্যালেন্স ব্রাউজারের মেমোরিতে সেভ করা
             localStorage.setItem('userBalance', currentBalance);
-            
-            // স্ক্রিনে নতুন ব্যালেন্স আপডেট করা
             updateBalanceDisplay();
-            
             alert("অভিনন্দন! আপনার টাস্কের " + rewardAmount + " টাকা সফলভাবে যোগ হয়েছে।");
-        </script>
+        });
+    </script>
 </body>
-</html>	
+</html>
