@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roja Islam - Income Platform</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: 'Arial', sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 25px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 25px;
+        }
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #00ffcc;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .brand-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+        .balance-box {
+            background: rgba(0, 255, 204, 0.1);
+            border: 2px dashed #00ffcc;
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        .balance-amount {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00ffcc;
+            margin-top: 5px;
+        }
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .task-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #00ffcc;
+            color: #0f2027;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+            transition: 0.3s;
+        }
+        .task-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 255, 204, 0.5);
+        }
+        .sub-btn {
+            display: block;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        .sub-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img src="me.jpg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png';" alt="Logo" class="logo-img">
+        <div class="brand-name">Roja Islam Income</div>
+        <p style="font-size: 12px; color: #b0bec5; margin: 5px 0 0 0;">সহজে টাস্ক পূরণ করে ইনকাম করুন</p>
+    </div>
+
+    <!-- ডেমো ব্যালেন্স বক্স -->
+    <div class="balance-box">
+        Your Balance
+        <div class="balance-amount">৳ ০.০০</div>
+    </div>
+
+    <div class="menu-container">
+        <!-- মেইন কাজের বাটন -->
+        <a href="#" onclick="alert('টাস্ক এখনো সেট করা হয়নি! ব্যাকএন্ড কানেক্ট করতে হবে।')" class="task-btn">⚡ Start Daily Task</a>
+        
+        <!-- অন্যান্য দরকারি বাটন -->
+        <a href="#" onclick="alert('আপনার অ্যাকাউন্ট ব্যালেন্স পর্যাপ্ত নয়!')" class="sub-btn">💸 Withdraw (টাকা তুলুন)</a>
+        <a href="https://t.me/+Tdq2zFmwi605ZDY1" target="_blank" class="sub-btn">🔵 Join Telegram Group</a>
+        <a href="https://youtube.com/@dabang_bd?si=UtpaA_dzcZJstOXk" target="_blank" class="sub-btn">🔴 YouTube Channel</a>
+    </div>
+</div>
+
+</body>
+</html>
+EOF
